@@ -2,6 +2,8 @@
 
 > **These builds live on my site:** [guerz.lol](https://guerz.lol) · browse them all at **[builds.guerz.lol](https://builds.guerz.lol)**
 
+> 🚧 **Work in progress:** this archive is still incomplete. I'm re-learning the RWD (v9) curriculum in order and adding each build as I finish it, so some modules are missing or only partly filled in.
+
 Every workshop, lab, and certification project I've built in freeCodeCamp's **Responsive Web Design (v9)** curriculum, one folder per build, kept in curriculum order.
 
 ## What this repo is
@@ -97,7 +99,14 @@ I'm a self-taught web developer working through six freeCodeCamp certifications 
 | Build | Type | Live | Code |
 |---|---|---|---|
 | CSS Grid | rwd workshop | [live](https://builds.guerz.lol/css-grid/) | [code](./css-grid/) |
-| Build a Magazine | rwd workshop | [live](https://builds.guerz.lol/magazine/) | [code](./magazine/) |
+
+### Legacy Responsive Web Design (V8)
+
+One bonus build from freeCodeCamp's older [Responsive Web Design (V8)](https://www.freecodecamp.org/learn/2022/responsive-web-design/) curriculum, kept in its own folder so it doesn't mix with the v9 builds.
+
+| Build | Type | Live | Code |
+|---|---|---|---|
+| Learn CSS Grid by Building a Magazine | legacy rwd v8 | [live](https://builds.guerz.lol/legacy-rwd-v8/magazine/) | [code](./legacy-rwd-v8/magazine/) |
 
 ## Hand-coded by me
 
