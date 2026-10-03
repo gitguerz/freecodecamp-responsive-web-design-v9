@@ -1,0 +1,126 @@
+/* builds.guerz.lol — landing page styles (index.html only; the builds keep their own styles.css) */
+/* palette + fonts match guerz.lol: peach #F4AD7D, lavender #b3a8cc, ink #3a2b22 */
+
+:root {                                              /* day-mode color tokens */
+  --peach: #F4AD7D;                                  /* brand peach */
+  --lavender: #b3a8cc;                               /* brand lavender */
+  --ink: #3a2b22;                                    /* constant dark brown for text on light surfaces */
+  --bg: oklch(0.94 0.035 55);                        /* warm cream page background */
+  --card: #fdf0e4;                                   /* build card surface */
+  --text: #3a2b22;                                   /* main text color */
+  --muted: #6a5d94;                                  /* muted purple for labels (5.2:1 contrast) */
+  --shadow: #3a2b22;                                 /* hard drop-shadow color */
+}
+@media (prefers-color-scheme: dark) {                /* follow the visitor's system dark mode */
+  :root {                                            /* night-mode overrides */
+    --bg: #17131f;                                   /* deep purple-black page */
+    --card: #241f30;                                 /* dark card surface */
+    --text: #eee6f5;                                 /* light text */
+    --muted: #b3a8cc;                                /* lavender labels */
+    --shadow: #000000;                               /* black shadows */
+  }
+}
+
+* { box-sizing: border-box; }                        /* padding + border count inside an element's width */
+html, body { margin: 0; padding: 0; }                /* remove the browser's default page gap */
+body {                                               /* the whole page */
+  background: var(--bg);                             /* cream by day, purple-black by night */
+  color: var(--text);                                /* default text color */
+  font: 16px/1.6 'Space Grotesk', sans-serif;        /* body font, same as guerz.lol */
+  max-width: 1160px;                                 /* keep lines readable on wide screens */
+  margin: 0 auto;                                    /* center the page column */
+  padding: 28px 20px 48px;                           /* breathing room around everything */
+}
+a { color: inherit; }                                /* links take the surrounding text color */
+a:focus-visible { outline: 3px solid var(--peach); outline-offset: 2px; } /* clear keyboard focus ring */
+
+.bx-skip {                                           /* "skip to the builds" link */
+  position: absolute;                                /* lift it out of the layout */
+  left: -9999px;                                     /* parked off-screen until focused */
+}
+.bx-skip:focus {                                     /* when a keyboard user tabs to it */
+  left: 16px; top: 16px;                             /* bring it on-screen, top-left */
+  background: var(--ink); color: var(--peach);       /* dark chip, peach text */
+  padding: 6px 12px;                                 /* tappable size */
+}
+
+.bx-header {                                         /* lavender title box (same look as guerz.lol's title card) */
+  background: var(--lavender);                       /* lavender surface */
+  color: var(--ink);                                 /* ink text, readable in both modes */
+  box-shadow: 5px 5px 0 var(--peach);                /* hard peach drop shadow */
+  padding: 16px;                                     /* inner spacing */
+  margin-bottom: 28px;                               /* gap before the first module */
+}
+.bx-label {                                          /* small label above the title */
+  margin: 0;                                         /* no extra space */
+  font: 700 12px 'IBM Plex Mono', monospace;         /* tiny mono label */
+}
+.bx-title {                                          /* big page title */
+  margin: .08em 0;                                   /* tight spacing, like guerz.lol */
+  font: 900 clamp(34px, 7.6vw, 72px)/.92 'Recursive', sans-serif; /* heavy display font, scales with screen */
+  text-transform: uppercase;                         /* all caps */
+  letter-spacing: -.04em;                            /* tighter caps */
+}
+.bx-intro { margin: .4em 0; font-size: 18px; }       /* intro paragraph, slightly larger */
+.bx-links {                                          /* row of outbound links */
+  display: flex; flex-wrap: wrap;                    /* side by side, wrapping on phones */
+  gap: 6px 18px;                                     /* space between links */
+  margin: .6em 0 0;                                  /* small gap above */
+  font: 700 13px 'IBM Plex Mono', monospace;         /* mono link labels */
+}
+
+.bx-module { margin: 0 0 32px; }                     /* one curriculum module, with space below */
+.bx-module-title {                                   /* module heading, e.g. "Basic HTML" */
+  margin: 0 0 12px;                                  /* gap above the cards */
+  font: 800 clamp(18px, 3vw, 24px)/1.15 'Recursive', sans-serif; /* bold display font */
+  text-transform: uppercase;                         /* all caps */
+  letter-spacing: .05em;                             /* airy caps */
+}
+.bx-count {                                          /* "13 built" next to the module name */
+  font: 700 11px 'IBM Plex Mono', monospace;         /* small mono */
+  color: var(--muted);                               /* muted purple */
+  letter-spacing: .04em;                             /* slight spacing */
+  margin-left: 8px;                                  /* gap from the module name */
+}
+.bx-grid {                                           /* card grid for one module */
+  list-style: none;                                  /* no bullets */
+  margin: 0; padding: 0;                             /* no default list indent */
+  display: grid;                                     /* grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); /* as many 260px+ columns as fit; one column on tiny phones */
+  gap: 14px;                                         /* space between cards */
+}
+.bx-card {                                           /* one build card (the whole card is the link) */
+  display: flex; flex-direction: column;             /* stack type, name, path */
+  gap: 6px;                                          /* space between those lines */
+  height: 100%;                                      /* equal-height cards in a row */
+  padding: 12px 14px;                                /* inner spacing */
+  background: var(--card);                           /* cream / dark card */
+  border: 2px solid var(--muted);                    /* purple border */
+  box-shadow: 4px 4px 0 var(--lavender);             /* lavender drop shadow */
+  text-decoration: none;                             /* no underline on the whole card */
+}
+.bx-card:hover { box-shadow: 4px 4px 0 var(--peach); } /* shadow turns peach on hover */
+.bx-type {                                           /* "rwd workshop" / "rwd lab" badge */
+  align-self: flex-start;                            /* badge hugs its text */
+  background: var(--ink); color: var(--peach);       /* dark chip, peach text */
+  font: 700 10px 'IBM Plex Mono', monospace;         /* tiny mono */
+  text-transform: uppercase;                         /* all caps */
+  letter-spacing: .05em;                             /* airy caps */
+  padding: 3px 8px;                                  /* chip padding */
+}
+.bx-name { font-weight: 700; font-size: 17px; line-height: 1.3; } /* build name */
+.bx-card:hover .bx-name { text-decoration: underline; } /* underline the name on hover (not color alone) */
+.bx-path {                                           /* the folder path under the name */
+  font: 500 12px 'IBM Plex Mono', monospace;         /* small mono */
+  color: var(--muted);                               /* muted purple */
+  overflow-wrap: anywhere;                           /* long paths wrap instead of overflowing */
+}
+
+.bx-footer {                                         /* page footer */
+  margin-top: 40px;                                  /* gap above */
+  padding-top: 16px;                                 /* space below the divider */
+  border-top: 2px solid var(--muted);                /* purple divider line */
+  font: 13px/1.6 'IBM Plex Mono', monospace;         /* small mono text */
+  color: var(--muted);                               /* muted purple */
+}
+.bx-footer p { margin: 0 0 6px; }                    /* tight paragraph spacing */

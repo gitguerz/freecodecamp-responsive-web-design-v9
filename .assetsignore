@@ -1,0 +1,9 @@
+# files Wrangler should NOT publish to builds.guerz.lol (same syntax as .gitignore)
+# git's internal folder (history, config): never public
+.git/
+# repo-only files that aren't part of the website
+README.md
+wrangler.jsonc
+.gitignore
+.assetsignore
+.DS_Store

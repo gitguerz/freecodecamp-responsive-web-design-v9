@@ -1,0 +1,12 @@
+// Cloudflare Workers config for builds.guerz.lol (JSONC = JSON that allows comments)
+{
+  // the Worker's name; must match the Worker name in the Cloudflare dashboard
+  "name": "freecodecamp-responsive-web-design-v9",
+  // which version of the Workers runtime behavior to use
+  "compatibility_date": "2026-10-01",
+  // serve this repo as plain static files (no Worker code)
+  "assets": {
+    // "." = the repo root is the folder of files to publish
+    "directory": "."
+  }
+}
