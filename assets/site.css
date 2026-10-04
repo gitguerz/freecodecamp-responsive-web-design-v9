@@ -86,34 +86,123 @@ a:focus-visible { outline: 3px solid var(--peach); outline-offset: 2px; } /* cle
   list-style: none;                                  /* no bullets */
   margin: 0; padding: 0;                             /* no default list indent */
   display: grid;                                     /* grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); /* as many 260px+ columns as fit; one column on tiny phones */
-  gap: 14px;                                         /* space between cards */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); /* as many 250px+ columns as fit; one column on tiny phones */
+  gap: 22px;                                         /* room for the hard shadows between cards */
 }
-.bx-card {                                           /* one build card (the whole card is the link) */
-  display: flex; flex-direction: column;             /* stack type, name, path */
-  gap: 6px;                                          /* space between those lines */
-  height: 100%;                                      /* equal-height cards in a row */
-  padding: 12px 14px;                                /* inner spacing */
+
+/* ---------- build card: snapshot on top, text underneath ---------- */
+.bx-card {                                           /* one build card */
+  --accent: var(--lavender);                         /* shadow + badge color; each build type swaps it below */
+  display: flex; flex-direction: column;             /* snapshot stacked on top of the text */
   background: var(--card);                           /* cream / dark card */
-  border: 2px solid var(--muted);                    /* purple border */
-  box-shadow: 4px 4px 0 var(--lavender);             /* lavender drop shadow */
-  text-decoration: none;                             /* no underline on the whole card */
+  border: 2px solid var(--ink);                      /* hard ink outline, like a sticker */
+  box-shadow: 5px 5px 0 var(--accent);               /* hard drop shadow in the type's color */
+  transition: transform .15s ease, box-shadow .15s ease; /* smooth lift on hover */
 }
-.bx-card:hover { box-shadow: 4px 4px 0 var(--peach); } /* shadow turns peach on hover */
+.bx-card:hover,                                      /* mouse over the card... */
+.bx-card:focus-within {                              /* ...or a keyboard user tabbed into it */
+  transform: translate(-3px, -3px);                  /* card lifts up and to the left */
+  box-shadow: 8px 8px 0 var(--accent);               /* shadow grows to sell the lift */
+}
+.bx-card--workshop { --accent: var(--lavender); }    /* workshops: lavender */
+.bx-card--lab      { --accent: var(--peach); }       /* labs: peach */
+.bx-card--cert     { --accent: #f08aa0; }            /* cert projects: bubblegum pink, so the big one pops (5.7:1 with ink text) */
+.bx-card--legacy   { --accent: #8fb8a8; }            /* legacy v8: faded sea green, an older era */
+
+.bx-shot {                                           /* the snapshot link (fake browser window) */
+  display: block;                                    /* fills the card's width */
+  border-bottom: 2px solid var(--ink);               /* ink line between snapshot and text */
+  overflow: hidden;                                  /* keeps the zoomed image inside the frame */
+  text-decoration: none;                             /* no underline on the address bar */
+}
+.bx-chrome {                                         /* the fake browser bar */
+  display: flex; align-items: center;                /* dots and address on one line */
+  gap: 8px;                                          /* space between dots and address */
+  padding: 5px 8px;                                  /* bar thickness */
+  background: var(--ink); color: var(--lavender);    /* dark bar, lavender address text */
+  font: 500 11px 'IBM Plex Mono', monospace;         /* tiny mono, like a real URL bar */
+  white-space: nowrap; overflow: hidden;             /* one line only... */
+  text-overflow: ellipsis;                           /* ...long addresses end in "…" */
+}
+.bx-dots {                                           /* the three window dots */
+  flex: none;                                        /* never squashed by a long address */
+  width: 7px; height: 7px; border-radius: 50%;       /* first dot: a 7px circle */
+  background: #f08aa0;                               /* pink */
+  box-shadow: 11px 0 0 var(--peach), 22px 0 0 var(--lavender); /* two more dots drawn as shadows: peach, lavender */
+  margin-right: 24px;                                /* make room for the two shadow dots */
+}
+.bx-shot img {                                       /* the screenshot */
+  display: block;                                    /* no stray gap under the image */
+  width: 100%; height: auto;                         /* fills the card, keeps its 16:10 shape */
+  aspect-ratio: 16 / 10;                             /* reserves the space before it loads, so nothing jumps */
+  object-fit: cover; object-position: top;           /* if it ever crops, keep the top of the page */
+  transition: transform .3s ease;                    /* smooth zoom on hover */
+}
+.bx-card:hover .bx-shot img { transform: scale(1.04); } /* tiny zoom when the card lifts */
+
+.bx-body {                                           /* text area under the snapshot */
+  display: flex; flex-direction: column;             /* meta, name, actions stacked */
+  gap: 6px;                                          /* space between them */
+  flex: 1;                                           /* fills leftover height so action rows line up across a row */
+  padding: 10px 12px 12px;                           /* inner spacing */
+}
+.bx-meta {                                           /* number + type badge row */
+  display: flex; align-items: center;                /* side by side, centered */
+  gap: 8px;                                          /* space between number and badge */
+  margin: 0;                                         /* no default paragraph margin */
+}
+.bx-num {                                            /* "#07" */
+  font: 900 15px 'Recursive', sans-serif;            /* heavy display font */
+  color: var(--muted);                               /* muted purple / lavender at night */
+}
 .bx-type {                                           /* "rwd workshop" / "rwd lab" badge */
-  align-self: flex-start;                            /* badge hugs its text */
-  background: var(--ink); color: var(--peach);       /* dark chip, peach text */
+  background: var(--accent); color: var(--ink);      /* chip in the type's color, ink text */
   font: 700 10px 'IBM Plex Mono', monospace;         /* tiny mono */
   text-transform: uppercase;                         /* all caps */
   letter-spacing: .05em;                             /* airy caps */
   padding: 3px 8px;                                  /* chip padding */
 }
-.bx-name { font-weight: 700; font-size: 17px; line-height: 1.3; } /* build name */
-.bx-card:hover .bx-name { text-decoration: underline; } /* underline the name on hover (not color alone) */
-.bx-path {                                           /* the folder path under the name */
-  font: 500 12px 'IBM Plex Mono', monospace;         /* small mono */
-  color: var(--muted);                               /* muted purple */
-  overflow-wrap: anywhere;                           /* long paths wrap instead of overflowing */
+.bx-name {                                           /* build name */
+  margin: 0;                                         /* no default heading margin */
+  font: 700 17px/1.3 'Space Grotesk', sans-serif;    /* bold body font */
+  flex: 1;                                           /* pushes the action row to the bottom */
+}
+.bx-name a { text-decoration: none; }                /* name link: no underline at rest... */
+.bx-name a:hover { text-decoration: underline; }     /* ...underline on hover (not color alone) */
+.bx-actions {                                        /* "▶ live" + "</> code" */
+  display: flex; gap: 8px;                           /* side by side */
+  margin: 4px 0 0;                                   /* small gap above */
+}
+.bx-actions a {                                      /* each action as a small button */
+  font: 700 12px 'IBM Plex Mono', monospace;         /* mono label */
+  text-decoration: none;                             /* no underline */
+  padding: 3px 9px;                                  /* button padding */
+  border: 2px solid var(--ink);                      /* ink outline */
+  background: var(--bg);                             /* page color, so it reads as a button on the card */
+}
+@media (prefers-color-scheme: dark) {                /* night: ink outlines would vanish on the dark card */
+  .bx-card, .bx-shot, .bx-actions a { border-color: var(--muted); } /* swap them for lavender */
+}
+.bx-actions a:hover { background: var(--accent); color: var(--ink); } /* button fills with the type color on hover */
+
+.bx-hint { margin: .2em 0; font-size: 15px; }        /* "click a snapshot…" line, a touch smaller than the intro */
+.bx-stats {                                          /* stat chips row */
+  list-style: none;                                  /* no bullets */
+  display: flex; flex-wrap: wrap;                    /* side by side, wrapping on phones */
+  gap: 8px;                                          /* space between chips */
+  margin: .7em 0 0; padding: 0;                      /* small gap above, no list indent */
+}
+.bx-stats li {                                       /* one chip */
+  background: var(--ink); color: var(--peach);       /* dark chip, peach text */
+  font: 700 12px 'IBM Plex Mono', monospace;         /* mono */
+  padding: 4px 10px;                                 /* chip padding */
+}
+.bx-stats b { font-size: 15px; color: #fdf0e4; }     /* the number itself: bigger, cream */
+
+@media (prefers-reduced-motion: reduce) {            /* visitors who asked their system for less motion */
+  .bx-card, .bx-shot img { transition: none; }       /* no animation... */
+  .bx-card:hover, .bx-card:focus-within,             /* ...no lift... */
+  .bx-card:hover .bx-shot img { transform: none; }   /* ...and no zoom */
 }
 
 .bx-footer {                                         /* page footer */

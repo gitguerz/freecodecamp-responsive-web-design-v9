@@ -17,9 +17,16 @@
     <p class="bx-label">builds.guerz.lol · hand-coded fCC builds</p> <!-- small label above the title -->
     <h1 class="bx-title">freeCodeCamp RWD v9 Builds</h1> <!-- the big page title -->
     <p class="bx-intro">every workshop, lab and cert project i've built in freeCodeCamp's Responsive Web Design (v9) curriculum, in the order i built them. each one is coded by me, by hand.</p> <!-- one-line intro -->
+    <p class="bx-hint">click a snapshot to open the live build, or hit &lt;/&gt; code to pop the hood on GitHub.</p> <!-- how to use the cards -->
+    <ul class="bx-stats"> <!-- quick numbers, shown as chips -->
+      <li><b>38</b> builds</li> <!-- 37 v9 builds + 1 legacy v8 -->
+      <li><b>9</b> modules</li> <!-- v9 modules with at least one build so far -->
+      <li><b>1</b> cert project</li> <!-- Build a Survey Form -->
+      <li><b>1</b> legacy v8 bonus</li> <!-- the Magazine -->
+    </ul> <!-- end of stat chips -->
     <p class="bx-links"> <!-- the row of links under the intro -->
       <a href="https://guerz.lol">↗ guerz.lol</a> <!-- back to the main site -->
-      <a href="https://guerz.lol/fcc-build-archive.html">↗ the build archive on guerz.lol</a> <!-- the gallery page with thumbnails -->
+      <a href="https://guerz.lol/fcc-build-archive.html">↗ the build archive on guerz.lol</a> <!-- the code-reading page: every build's source in tabs -->
       <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9">↗ source on github</a> <!-- this repo -->
     </p> <!-- end of link row -->
   </header> <!-- end of title box -->
@@ -27,90 +34,470 @@
     <section class="bx-module" aria-labelledby="mod-basic-html"> <!-- curriculum module: Basic HTML -->
       <h2 class="bx-module-title" id="mod-basic-html">Basic HTML <span class="bx-count">12 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="curriculum-outline/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Curriculum Outline</span> <span class="bx-path">/curriculum-outline/</span></a></li> <!-- Build a Curriculum Outline -->
-        <li><a class="bx-card" href="camperbot-profile/"><span class="bx-type">rwd lab</span> <span class="bx-name">Debug Camperbot’s Profile Page</span> <span class="bx-path">/camperbot-profile/</span></a></li> <!-- Debug Camperbot’s Profile Page -->
-        <li><a class="bx-card" href="cat-photo-app/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Cat Photo App</span> <span class="bx-path">/cat-photo-app/</span></a></li> <!-- Build a Cat Photo App -->
-        <li><a class="bx-card" href="recipe-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Recipe Page</span> <span class="bx-path">/recipe-page/</span></a></li> <!-- Build a Recipe Page -->
-        <li><a class="bx-card" href="bookstore-page/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Bookstore Page</span> <span class="bx-path">/bookstore-page/</span></a></li> <!-- Build a Bookstore Page -->
-        <li><a class="bx-card" href="travel-agency-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Travel Agency Page</span> <span class="bx-path">/travel-agency-page/</span></a></li> <!-- Build a Travel Agency Page -->
-        <li><a class="bx-card" href="html-music-player/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build an HTML Music Player</span> <span class="bx-path">/html-music-player/</span></a></li> <!-- Build an HTML Music Player -->
-        <li><a class="bx-card" href="html-video-player/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build an HTML Video Player</span> <span class="bx-path">/html-video-player/</span></a></li> <!-- Build an HTML Video Player -->
-        <li><a class="bx-card" href="html-audio-video-player/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build an HTML Audio and Video Player</span> <span class="bx-path">/html-audio-video-player/</span></a></li> <!-- Build an HTML Audio and Video Player -->
-        <li><a class="bx-card" href="heart-icon/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Heart Icon</span> <span class="bx-path">/heart-icon/</span></a></li> <!-- Build a Heart Icon -->
-        <li><a class="bx-card" href="iframe-video-display/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Video Display Using iframe</span> <span class="bx-path">/iframe-video-display/</span></a></li> <!-- Build a Video Display Using iframe -->
-        <li><a class="bx-card" href="video-compilation-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Video Compilation Page</span> <span class="bx-path">/video-compilation-page/</span></a></li> <!-- Build a Video Compilation Page -->
+        <li class="bx-card bx-card--workshop"> <!-- build #01: Build a Curriculum Outline -->
+          <a class="bx-shot" href="curriculum-outline/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/curriculum-outline/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/curriculum-outline.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#01</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="curriculum-outline/">Build a Curriculum Outline</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="curriculum-outline/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/curriculum-outline">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #01 -->
+        <li class="bx-card bx-card--lab"> <!-- build #02: Debug Camperbot’s Profile Page -->
+          <a class="bx-shot" href="camperbot-profile/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/camperbot-profile/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/camperbot-profile.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#02</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="camperbot-profile/">Debug Camperbot’s Profile Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="camperbot-profile/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/camperbot-profile">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #02 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #03: Build a Cat Photo App -->
+          <a class="bx-shot" href="cat-photo-app/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/cat-photo-app/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/cat-photo-app.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#03</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="cat-photo-app/">Build a Cat Photo App</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="cat-photo-app/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/cat-photo-app">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #03 -->
+        <li class="bx-card bx-card--lab"> <!-- build #04: Build a Recipe Page -->
+          <a class="bx-shot" href="recipe-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/recipe-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/recipe-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#04</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="recipe-page/">Build a Recipe Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="recipe-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/recipe-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #04 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #05: Build a Bookstore Page -->
+          <a class="bx-shot" href="bookstore-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/bookstore-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/bookstore-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#05</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="bookstore-page/">Build a Bookstore Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="bookstore-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/bookstore-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #05 -->
+        <li class="bx-card bx-card--lab"> <!-- build #06: Build a Travel Agency Page -->
+          <a class="bx-shot" href="travel-agency-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/travel-agency-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/travel-agency-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#06</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="travel-agency-page/">Build a Travel Agency Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="travel-agency-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/travel-agency-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #06 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #07: Build an HTML Music Player -->
+          <a class="bx-shot" href="html-music-player/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/html-music-player/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/html-music-player.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#07</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="html-music-player/">Build an HTML Music Player</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="html-music-player/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/html-music-player">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #07 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #08: Build an HTML Video Player -->
+          <a class="bx-shot" href="html-video-player/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/html-video-player/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/html-video-player.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#08</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="html-video-player/">Build an HTML Video Player</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="html-video-player/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/html-video-player">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #08 -->
+        <li class="bx-card bx-card--lab"> <!-- build #09: Build an HTML Audio and Video Player -->
+          <a class="bx-shot" href="html-audio-video-player/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/html-audio-video-player/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/html-audio-video-player.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#09</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="html-audio-video-player/">Build an HTML Audio and Video Player</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="html-audio-video-player/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/html-audio-video-player">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #09 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #10: Build a Heart Icon -->
+          <a class="bx-shot" href="heart-icon/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/heart-icon/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/heart-icon.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#10</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="heart-icon/">Build a Heart Icon</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="heart-icon/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/heart-icon">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #10 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #11: Build a Video Display Using iframe -->
+          <a class="bx-shot" href="iframe-video-display/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/iframe-video-display/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/iframe-video-display.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#11</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="iframe-video-display/">Build a Video Display Using iframe</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="iframe-video-display/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/iframe-video-display">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #11 -->
+        <li class="bx-card bx-card--lab"> <!-- build #12: Build a Video Compilation Page -->
+          <a class="bx-shot" href="video-compilation-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/video-compilation-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/video-compilation-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#12</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="video-compilation-page/">Build a Video Compilation Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="video-compilation-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/video-compilation-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #12 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-semantic-html"> <!-- curriculum module: Semantic HTML -->
       <h2 class="bx-module-title" id="mod-semantic-html">Semantic HTML <span class="bx-count">4 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="major-web-browsers/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a List of Major Web Browsers</span> <span class="bx-path">/major-web-browsers/</span></a></li> <!-- Build a List of Major Web Browsers -->
-        <li><a class="bx-card" href="quincy-job-tips/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build Quincy’s Job Tips Page</span> <span class="bx-path">/quincy-job-tips/</span></a></li> <!-- Build Quincy’s Job Tips Page -->
-        <li><a class="bx-card" href="cat-blog-page/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Cat Blog Page</span> <span class="bx-path">/cat-blog-page/</span></a></li> <!-- Build a Cat Blog Page -->
-        <li><a class="bx-card" href="event-hub/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build an Event Hub</span> <span class="bx-path">/event-hub/</span></a></li> <!-- Build an Event Hub -->
+        <li class="bx-card bx-card--workshop"> <!-- build #13: Build a List of Major Web Browsers -->
+          <a class="bx-shot" href="major-web-browsers/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/major-web-browsers/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/major-web-browsers.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#13</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="major-web-browsers/">Build a List of Major Web Browsers</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="major-web-browsers/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/major-web-browsers">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #13 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #14: Build Quincy’s Job Tips Page -->
+          <a class="bx-shot" href="quincy-job-tips/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/quincy-job-tips/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/quincy-job-tips.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#14</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="quincy-job-tips/">Build Quincy’s Job Tips Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="quincy-job-tips/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/quincy-job-tips">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #14 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #15: Build a Cat Blog Page -->
+          <a class="bx-shot" href="cat-blog-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/cat-blog-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/cat-blog-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#15</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="cat-blog-page/">Build a Cat Blog Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="cat-blog-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/cat-blog-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #15 -->
+        <li class="bx-card bx-card--lab"> <!-- build #16: Build an Event Hub -->
+          <a class="bx-shot" href="event-hub/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/event-hub/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/event-hub.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#16</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="event-hub/">Build an Event Hub</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="event-hub/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/event-hub">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #16 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-forms-and-tables"> <!-- curriculum module: Forms and Tables -->
       <h2 class="bx-module-title" id="mod-forms-and-tables">Forms and Tables <span class="bx-count">4 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="hotel-feedback-form/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Hotel Feedback Form</span> <span class="bx-path">/hotel-feedback-form/</span></a></li> <!-- Build a Hotel Feedback Form -->
-        <li><a class="bx-card" href="final-exams-table/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Final Exams Table</span> <span class="bx-path">/final-exams-table/</span></a></li> <!-- Build a Final Exams Table -->
-        <li><a class="bx-card" href="book-catalog-table/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Book Catalog Table</span> <span class="bx-path">/book-catalog-table/</span></a></li> <!-- Build a Book Catalog Table -->
-        <li><a class="bx-card" href="survey-form/"><span class="bx-type">rwd cert project</span> <span class="bx-name">Build a Survey Form</span> <span class="bx-path">/survey-form/</span></a></li> <!-- Build a Survey Form -->
+        <li class="bx-card bx-card--workshop"> <!-- build #17: Build a Hotel Feedback Form -->
+          <a class="bx-shot" href="hotel-feedback-form/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/hotel-feedback-form/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/hotel-feedback-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#17</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="hotel-feedback-form/">Build a Hotel Feedback Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="hotel-feedback-form/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/hotel-feedback-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #17 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #18: Build a Final Exams Table -->
+          <a class="bx-shot" href="final-exams-table/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/final-exams-table/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/final-exams-table.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#18</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="final-exams-table/">Build a Final Exams Table</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="final-exams-table/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/final-exams-table">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #18 -->
+        <li class="bx-card bx-card--lab"> <!-- build #19: Build a Book Catalog Table -->
+          <a class="bx-shot" href="book-catalog-table/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/book-catalog-table/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/book-catalog-table.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#19</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="book-catalog-table/">Build a Book Catalog Table</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="book-catalog-table/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/book-catalog-table">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #19 -->
+        <li class="bx-card bx-card--cert"> <!-- build #20: Build a Survey Form -->
+          <a class="bx-shot" href="survey-form/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/survey-form/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/survey-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#20</span> <span class="bx-type">rwd cert project</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="survey-form/">Build a Survey Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="survey-form/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/survey-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #20 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-accessibility"> <!-- curriculum module: Accessibility -->
       <h2 class="bx-module-title" id="mod-accessibility">Accessibility <span class="bx-count">7 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="coding-journey-blog-page/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Debug a Coding Journey Blog Page</span> <span class="bx-path">/coding-journey-blog-page/</span></a></li> <!-- Debug a Coding Journey Blog Page -->
-        <li><a class="bx-card" href="tech-conference-schedule-table/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Tech Conference Schedule Table</span> <span class="bx-path">/tech-conference-schedule-table/</span></a></li> <!-- Build a Tech Conference Schedule Table -->
-        <li><a class="bx-card" href="donation-form/"><span class="bx-type">rwd lab</span> <span class="bx-name">Debug a Donation Form</span> <span class="bx-path">/donation-form/</span></a></li> <!-- Debug a Donation Form -->
-        <li><a class="bx-card" href="accessible-audio-controller/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build an Accessible Audio Controller</span> <span class="bx-path">/accessible-audio-controller/</span></a></li> <!-- Build an Accessible Audio Controller -->
-        <li><a class="bx-card" href="checkout-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Checkout Page</span> <span class="bx-path">/checkout-page/</span></a></li> <!-- Build a Checkout Page -->
-        <li><a class="bx-card" href="movie-review-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Design a Movie Review Page</span> <span class="bx-path">/movie-review-page/</span></a></li> <!-- Design a Movie Review Page -->
-        <li><a class="bx-card" href="multimedia-player/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Multimedia Player</span> <span class="bx-path">/multimedia-player/</span></a></li> <!-- Build a Multimedia Player -->
+        <li class="bx-card bx-card--workshop"> <!-- build #21: Debug a Coding Journey Blog Page -->
+          <a class="bx-shot" href="coding-journey-blog-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/coding-journey-blog-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/coding-journey-blog-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#21</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="coding-journey-blog-page/">Debug a Coding Journey Blog Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="coding-journey-blog-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/coding-journey-blog-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #21 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #22: Build a Tech Conference Schedule Table -->
+          <a class="bx-shot" href="tech-conference-schedule-table/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/tech-conference-schedule-table/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/tech-conference-schedule-table.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#22</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="tech-conference-schedule-table/">Build a Tech Conference Schedule Table</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="tech-conference-schedule-table/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/tech-conference-schedule-table">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #22 -->
+        <li class="bx-card bx-card--lab"> <!-- build #23: Debug a Donation Form -->
+          <a class="bx-shot" href="donation-form/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/donation-form/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/donation-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#23</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="donation-form/">Debug a Donation Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="donation-form/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/donation-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #23 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #24: Build an Accessible Audio Controller -->
+          <a class="bx-shot" href="accessible-audio-controller/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/accessible-audio-controller/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/accessible-audio-controller.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#24</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="accessible-audio-controller/">Build an Accessible Audio Controller</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="accessible-audio-controller/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/accessible-audio-controller">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #24 -->
+        <li class="bx-card bx-card--lab"> <!-- build #25: Build a Checkout Page -->
+          <a class="bx-shot" href="checkout-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/checkout-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/checkout-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#25</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="checkout-page/">Build a Checkout Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="checkout-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/checkout-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #25 -->
+        <li class="bx-card bx-card--lab"> <!-- build #26: Design a Movie Review Page -->
+          <a class="bx-shot" href="movie-review-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/movie-review-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/movie-review-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#26</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="movie-review-page/">Design a Movie Review Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="movie-review-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/movie-review-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #26 -->
+        <li class="bx-card bx-card--lab"> <!-- build #27: Build a Multimedia Player -->
+          <a class="bx-shot" href="multimedia-player/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/multimedia-player/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/multimedia-player.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#27</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="multimedia-player/">Build a Multimedia Player</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="multimedia-player/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/multimedia-player">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #27 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-basic-css"> <!-- curriculum module: Basic CSS -->
       <h2 class="bx-module-title" id="mod-basic-css">Basic CSS <span class="bx-count">4 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="design-a-cafe-menu/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Design a Cafe Menu</span> <span class="bx-path">/design-a-cafe-menu/</span></a></li> <!-- Design a Cafe Menu -->
-        <li><a class="bx-card" href="design-a-business-card/"><span class="bx-type">rwd lab</span> <span class="bx-name">Design a Business Card</span> <span class="bx-path">/design-a-business-card/</span></a></li> <!-- Design a Business Card -->
-        <li><a class="bx-card" href="build-a-stylized-to-do-list/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Stylized To-Do List</span> <span class="bx-path">/build-a-stylized-to-do-list/</span></a></li> <!-- Build a Stylized To-Do List -->
-        <li><a class="bx-card" href="design-a-blog-post-card/"><span class="bx-type">rwd lab</span> <span class="bx-name">Design a Blog Post Card</span> <span class="bx-path">/design-a-blog-post-card/</span></a></li> <!-- Design a Blog Post Card -->
+        <li class="bx-card bx-card--workshop"> <!-- build #28: Design a Cafe Menu -->
+          <a class="bx-shot" href="design-a-cafe-menu/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/design-a-cafe-menu/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/design-a-cafe-menu.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#28</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="design-a-cafe-menu/">Design a Cafe Menu</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="design-a-cafe-menu/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/design-a-cafe-menu">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #28 -->
+        <li class="bx-card bx-card--lab"> <!-- build #29: Design a Business Card -->
+          <a class="bx-shot" href="design-a-business-card/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/design-a-business-card/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/design-a-business-card.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#29</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="design-a-business-card/">Design a Business Card</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="design-a-business-card/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/design-a-business-card">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #29 -->
+        <li class="bx-card bx-card--lab"> <!-- build #30: Build a Stylized To-Do List -->
+          <a class="bx-shot" href="build-a-stylized-to-do-list/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/build-a-stylized-to-do-list/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/build-a-stylized-to-do-list.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#30</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="build-a-stylized-to-do-list/">Build a Stylized To-Do List</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="build-a-stylized-to-do-list/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/build-a-stylized-to-do-list">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #30 -->
+        <li class="bx-card bx-card--lab"> <!-- build #31: Design a Blog Post Card -->
+          <a class="bx-shot" href="design-a-blog-post-card/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/design-a-blog-post-card/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/design-a-blog-post-card.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#31</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="design-a-blog-post-card/">Design a Blog Post Card</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="design-a-blog-post-card/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/design-a-blog-post-card">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #31 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-absolute-and-relative-units"> <!-- curriculum module: Absolute and Relative Units -->
       <h2 class="bx-module-title" id="mod-absolute-and-relative-units">Absolute and Relative Units <span class="bx-count">1 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="build-an-event-flyer-page/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build an Event Flyer Page</span> <span class="bx-path">/build-an-event-flyer-page/</span></a></li> <!-- Build an Event Flyer Page -->
+        <li class="bx-card bx-card--lab"> <!-- build #32: Build an Event Flyer Page -->
+          <a class="bx-shot" href="build-an-event-flyer-page/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/build-an-event-flyer-page/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/build-an-event-flyer-page.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#32</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="build-an-event-flyer-page/">Build an Event Flyer Page</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="build-an-event-flyer-page/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/build-an-event-flyer-page">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #32 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-pseudo-classes-and-elements"> <!-- curriculum module: Pseudo Classes and Elements -->
       <h2 class="bx-module-title" id="mod-pseudo-classes-and-elements">Pseudo Classes and Elements <span class="bx-count">3 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="design-a-greeting-card/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Design a Greeting Card</span> <span class="bx-path">/design-a-greeting-card/</span></a></li> <!-- Design a Greeting Card -->
-        <li><a class="bx-card" href="design-a-parent-teacher-conference-form/"><span class="bx-type">rwd workshop</span> <span class="bx-name">Design a Parent Teacher Conference Form</span> <span class="bx-path">/design-a-parent-teacher-conference-form/</span></a></li> <!-- Design a Parent Teacher Conference Form -->
-        <li><a class="bx-card" href="build-a-job-application-form/"><span class="bx-type">rwd lab</span> <span class="bx-name">Build a Job Application Form</span> <span class="bx-path">/build-a-job-application-form/</span></a></li> <!-- Build a Job Application Form -->
+        <li class="bx-card bx-card--workshop"> <!-- build #33: Design a Greeting Card -->
+          <a class="bx-shot" href="design-a-greeting-card/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/design-a-greeting-card/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/design-a-greeting-card.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#33</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="design-a-greeting-card/">Design a Greeting Card</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="design-a-greeting-card/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/design-a-greeting-card">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #33 -->
+        <li class="bx-card bx-card--workshop"> <!-- build #34: Design a Parent Teacher Conference Form -->
+          <a class="bx-shot" href="design-a-parent-teacher-conference-form/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/design-a-parent-teacher-conference-form/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/design-a-parent-teacher-conference-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#34</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="design-a-parent-teacher-conference-form/">Design a Parent Teacher Conference Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="design-a-parent-teacher-conference-form/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/design-a-parent-teacher-conference-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #34 -->
+        <li class="bx-card bx-card--lab"> <!-- build #35: Build a Job Application Form -->
+          <a class="bx-shot" href="build-a-job-application-form/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/build-a-job-application-form/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/build-a-job-application-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#35</span> <span class="bx-type">rwd lab</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="build-a-job-application-form/">Build a Job Application Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="build-a-job-application-form/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/build-a-job-application-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #35 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-styling-forms"> <!-- curriculum module: Styling Forms -->
       <h2 class="bx-module-title" id="mod-styling-forms">Styling Forms <span class="bx-count">1 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="registration-form/registration-form.html"><span class="bx-type">rwd workshop</span> <span class="bx-name">Build a Registration Form</span> <span class="bx-path">/registration-form/registration-form.html</span></a></li> <!-- Build a Registration Form -->
+        <li class="bx-card bx-card--workshop"> <!-- build #36: Build a Registration Form -->
+          <a class="bx-shot" href="registration-form/registration-form.html" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/registration-form/registration-form.html</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/registration-form.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#36</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="registration-form/registration-form.html">Build a Registration Form</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="registration-form/registration-form.html">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/registration-form">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #36 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-grid"> <!-- curriculum module: Grid -->
       <h2 class="bx-module-title" id="mod-grid">Grid <span class="bx-count">1 built</span></h2> <!-- module name + how many builds it holds -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="css-grid/"><span class="bx-type">rwd workshop</span> <span class="bx-name">CSS Grid</span> <span class="bx-path">/css-grid/</span></a></li> <!-- CSS Grid -->
+        <li class="bx-card bx-card--workshop"> <!-- build #37: CSS Grid -->
+          <a class="bx-shot" href="css-grid/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/css-grid/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/css-grid.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#37</span> <span class="bx-type">rwd workshop</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="css-grid/">CSS Grid</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="css-grid/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/css-grid">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #37 -->
       </ul> <!-- end of this module's cards -->
     </section> <!-- end of module -->
     <section class="bx-module" aria-labelledby="mod-legacy-rwd-v8"> <!-- bonus section: a build from the older V8 curriculum -->
       <h2 class="bx-module-title" id="mod-legacy-rwd-v8">Legacy Responsive Web Design (V8) <span class="bx-count">1 built</span></h2> <!-- section name + how many builds it holds -->
       <p class="bx-intro"><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">↗ fCC's legacy Responsive Web Design (V8) curriculum</a></p> <!-- link to the older curriculum this build comes from -->
       <ul class="bx-grid"> <!-- one card per build -->
-        <li><a class="bx-card" href="legacy-rwd-v8/magazine/"><span class="bx-type">legacy rwd v8</span> <span class="bx-name">Learn CSS Grid by Building a Magazine</span> <span class="bx-path">/legacy-rwd-v8/magazine/</span></a></li> <!-- Learn CSS Grid by Building a Magazine -->
+        <li class="bx-card bx-card--legacy"> <!-- build #38: Learn CSS Grid by Building a Magazine -->
+          <a class="bx-shot" href="legacy-rwd-v8/magazine/" tabindex="-1" aria-hidden="true"> <!-- the snapshot opens the live build (skipped by keyboard + screen readers: the name link below does the same job) -->
+            <span class="bx-chrome"><span class="bx-dots"></span>/legacy-rwd-v8/magazine/</span> <!-- fake browser bar: three dots + the build's address -->
+            <img src="assets/thumbs/magazine.webp" width="640" height="400" loading="lazy" alt=""> <!-- screenshot of the live build; empty alt because the name already says what it is -->
+          </a> <!-- end of snapshot -->
+          <div class="bx-body"> <!-- text under the snapshot -->
+            <p class="bx-meta"><span class="bx-num">#38</span> <span class="bx-type">legacy rwd v8</span></p> <!-- build number (in the order i built them) + type badge -->
+            <h3 class="bx-name"><a href="legacy-rwd-v8/magazine/">Learn CSS Grid by Building a Magazine</a></h3> <!-- build name, links to the live build -->
+            <p class="bx-actions"><a href="legacy-rwd-v8/magazine/">▶ live</a> <a href="https://github.com/gitguerz/freecodecamp-responsive-web-design-v9/tree/main/legacy-rwd-v8/magazine">&lt;/&gt; code</a></p> <!-- open the build, or read its source on GitHub -->
+          </div> <!-- end of card text -->
+        </li> <!-- end of build #38 -->
       </ul> <!-- end of this section's cards -->
     </section> <!-- end of legacy section -->
   </main> <!-- end of build lists -->
