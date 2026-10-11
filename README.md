@@ -88,6 +88,12 @@ I'm a self-taught web developer working through six freeCodeCamp certifications 
 | Design a Parent Teacher Conference Form | rwd workshop | [live](https://builds.guerz.lol/design-a-parent-teacher-conference-form/) | [code](./design-a-parent-teacher-conference-form/) |
 | Build a Job Application Form | rwd lab | [live](https://builds.guerz.lol/build-a-job-application-form/) | [code](./build-a-job-application-form/) |
 
+### Colors
+
+| Build | Type | Live | Code |
+|---|---|---|---|
+| Build a Set of Colored Markers | rwd workshop | [live](https://builds.guerz.lol/build-a-set-of-colored-markers/) | [code](./build-a-set-of-colored-markers/) |
+
 ### Styling Forms
 
 | Build | Type | Live | Code |

@@ -1,0 +1,45 @@
+h1 { /* element selector: targets the page heading */
+  text-align: center; /* centers the heading text horizontally */
+}
+
+.container { /* class selector: the white backdrop behind all three markers */
+  background-color: rgb(255, 255, 255); /* rgb(red, green, blue), each 0-255; 255, 255, 255 is white */
+  padding: 10px 0; /* shorthand: 10px top and bottom, 0 left and right */
+}
+
+.marker { /* shared shape for every marker; the color classes below add the look */
+  width: 200px; /* total marker length: cap (60) + sleeve (110) + border (10) + a little breathing room */
+  height: 25px; /* marker thickness */
+  margin: 10px auto; /* 10px above and below; "auto" on the sides centers the block horizontally */
+}
+
+.cap { /* the cap piece of the marker */
+  width: 60px; /* cap length */
+  height: 25px; /* same height as the marker so it fills it */
+}
+
+.sleeve { /* the see-through sleeve piece */
+  width: 110px; /* sleeve length */
+  height: 25px; /* same height as the marker */
+  background-color: rgba(255, 255, 255, 0.5); /* rgba adds a 4th value, alpha: 0 is invisible, 1 is solid; 0.5 is half see-through white */
+  border-left: 10px double rgba(0, 0, 0, 0.75); /* left edge only: 10px wide, double line style, 75% opaque black */
+}
+
+.cap, .sleeve { /* grouped selector: one rule applied to both classes */
+  display: inline-block; /* lets the two divs sit side by side while still accepting width and height */
+}
+
+.red { /* red marker */
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)); /* top-to-bottom gradient (default direction) with three color-stops, all written as rgb() */
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8); /* offsetX 0, offsetY 0, blur 20px, spread 0, color: a dark red at 80% opacity (a glow, not a drop shadow) */
+}
+
+.green { /* green marker */
+  background: linear-gradient(#55680D, #71F53E, #116C31); /* same gradient idea, color-stops written as hex values */
+  box-shadow: 0 0 20px 0 #3B7E20CC; /* 8-digit hex: the last two digits (CC) are alpha, roughly 80% opacity */
+}
+
+.blue { /* blue marker */
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%)); /* color-stops written as hsl(hue 0-360, saturation %, lightness %) */
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8); /* hsla adds alpha to hsl, so this glow is 80% opaque */
+}
