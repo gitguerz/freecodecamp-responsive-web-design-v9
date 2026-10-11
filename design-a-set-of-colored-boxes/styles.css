@@ -1,0 +1,27 @@
+body { /* element selector: targets the whole page body */
+  background-color: #f4f4f4; /* hex value for a very light gray page background */
+  }
+  .color-grid { /* class selector: the flex container that holds all five boxes */
+  display: flex; /* turns on flexbox, so the child boxes line up in a row */
+  flex-wrap: wrap; /* lets boxes drop to the next line when there isn't room, instead of squishing */
+  gap: 10px; /* 10px of space between boxes, without needing margins */
+  }
+  .color-box { /* shared shape for every box; the color classes below add the color */
+  width: 100px; /* box width */
+  height: 100px; /* box height; same as the width, so each box is a square */
+  }
+  .color1 { /* box 1 */
+  background-color: #e63946; /* hex: red (e6), green (39), blue (46), each in base 16; a strong red */
+  }
+  .color2 { /* box 2 */
+  background-color: rgb(69, 123, 157); /* rgb(red, green, blue), each 0-255; a muted blue */
+  }
+  .color3 { /* box 3 */
+  background-color: tomato; /* a named color: the browser already knows what "tomato" means */
+  }
+  .color4 { /* box 4 */
+  background-color: hsl(150, 60%, 45%); /* hsl(hue 0-360, saturation %, lightness %); hue 150 is a green */
+  }
+  .color5 { /* box 5 */
+  background-color: hsla(270, 70%, 55%, 0.8); /* hsla adds alpha: 0.8 means 80% opaque, so the gray page shows through a little; hue 270 is a purple */
+}

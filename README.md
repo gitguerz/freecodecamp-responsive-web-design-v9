@@ -93,6 +93,7 @@ I'm a self-taught web developer working through six freeCodeCamp certifications 
 | Build | Type | Live | Code |
 |---|---|---|---|
 | Build a Set of Colored Markers | rwd workshop | [live](https://builds.guerz.lol/build-a-set-of-colored-markers/) | [code](./build-a-set-of-colored-markers/) |
+| Design a Set of Colored Boxes | rwd lab | [live](https://builds.guerz.lol/design-a-set-of-colored-boxes/) | [code](./design-a-set-of-colored-boxes/) |
 
 ### Styling Forms
 
